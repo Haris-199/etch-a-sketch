@@ -2,12 +2,21 @@
     --grid-size: 750px;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: rgb(58, 180, 180);
+}
+
 #grid {
     width: var(--grid-size);
     height: var(--grid-size);
     max-width: var(--grid-size);
     max-height: var(--grid-size);
 
+    border: solid 1px black;
     display: flex;
     flex-direction: column;
 }
