@@ -22,6 +22,7 @@ grid.addEventListener("mouseover", event => {
 
 changeSizeBtn.addEventListener("click", () => {
     const size = prompt("What size would you like?");
+    if (isNaN(size)) return;
     if (grid.firstChild) grid.replaceChildren();
     generateGrid(size);
 });
