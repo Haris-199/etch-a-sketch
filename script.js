@@ -1,5 +1,4 @@
 const ROWS = 16, COLS = 16;
-
 const grid = document.getElementById("grid");
 
 for (let y = 0; y < ROWS; y++) {
@@ -12,3 +11,7 @@ for (let y = 0; y < ROWS; y++) {
     }
     grid.appendChild(row);
 }
+
+grid.addEventListener("mouseover", (event) => {
+    event.target.classList.add("filled");
+});
