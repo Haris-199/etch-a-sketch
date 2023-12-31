@@ -1,10 +1,11 @@
 const grid = document.getElementById("grid");
+const changeSizeBtn = document.getElementById("change-size-btn");
 
-function generateGrid(rows, cols) {
-    for (let y = 0; y < rows; y++) {
+function generateGrid(size) {
+    for (let y = 0; y < size; y++) {
         let row = document.createElement("row");
         row.classList.add("row");
-        for (let x = 0; x < cols; x++) {
+        for (let x = 0; x < size; x++) {
             let square = document.createElement("div");
             square.classList.add("square");
             row.appendChild(square);
@@ -12,10 +13,15 @@ function generateGrid(rows, cols) {
         grid.appendChild(row);
     }
 }
-generateGrid(16, 16);
+generateGrid(16);
 
 grid.addEventListener("mouseover", event => {
     if (event.target.classList.contains("square"))
         event.target.classList.add("filled");
 });
 
+changeSizeBtn.addEventListener("click", () => {
+    const size = prompt("What size would you like?");
+    if (grid.firstChild) grid.replaceChildren();
+    generateGrid(size);
+});
