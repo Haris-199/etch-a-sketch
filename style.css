@@ -1,10 +1,24 @@
+:root {
+    --grid-size: 750px;
+}
+
+#grid {
+    width: var(--grid-size);
+    height: var(--grid-size);
+    max-width: var(--grid-size);
+    max-height: var(--grid-size);
+
+    display: flex;
+    flex-direction: column;
+}
+
 .row {
+    flex: 1;
     display: flex;
 }
 
 .square {
-    height: 25px;
-    width: 25px;
+    flex: 1;
     border: solid 1px black;
 }
 
