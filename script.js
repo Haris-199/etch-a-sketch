@@ -12,6 +12,8 @@ for (let y = 0; y < ROWS; y++) {
     grid.appendChild(row);
 }
 
-grid.addEventListener("mouseover", (event) => {
-    event.target.classList.add("filled");
+grid.addEventListener("mouseover", event => {
+    // console.log(event.target.classList);
+    if (event.target.classList.contains("square"))
+        event.target.classList.add("filled");
 });
