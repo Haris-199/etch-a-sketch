@@ -22,11 +22,11 @@ grid.addEventListener("mouseover", event => {
 
 changeSizeBtn.addEventListener("click", () => {
     let size = prompt("What size do you want the grid?");
+    if (size === null) return;
     if (isNaN(size)) return;
 
+
     size = parseInt(size);
-    console.log(size)
-    console.log(typeof size)
     if (size > 100 || size < 1) return;
 
     if (grid.firstChild) grid.replaceChildren();
