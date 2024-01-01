@@ -7,7 +7,7 @@ body {
     flex-direction: column;
     align-items: center;
 
-    background-color: rgb(58, 58, 58);
+    background-color: grey;
 }
 
 button {
@@ -28,7 +28,7 @@ button {
 }
 button:hover {
     background-color: rgb(50, 50, 50);
-    color: rgb(250, 250, 250);
+    color: white;
 }
 
 #grid {
@@ -37,7 +37,8 @@ button:hover {
     max-width: var(--grid-size);
     max-height: var(--grid-size);
 
-    border: solid 1px black;
+    border: solid 50px rgb(220, 0, 60);
+    border-radius: 50px;
     display: flex;
     flex-direction: column;
 }
